@@ -3,13 +3,13 @@ import { View, StyleSheet,  TouchableOpacity, Text, Image, Button, ScrollView, T
 import Icon from 'react-native-vector-icons/AntDesign';
 import { ImageBackground } from 'react-native';
 
-const App = () => {
+const TelaInicial = ({ navigation }) => {
   return ( 
-  <ImageBackground source={require('../src/imagemLogin.jpg')} 
+  <ImageBackground source={require('../imagemLogin.jpg')} 
     style={styles.imageBackground}>
 
     <View>
-      <TouchableOpacity style={styles.repostCadastro}>
+      <TouchableOpacity style={styles.repostCadastro} onPress={ () => { navigation.navigate('Login') } }>
         <Text style={styles.decoraCadastro}>
           Cadastre-se e ganhe descontos especiais !!!
         </Text>
@@ -37,7 +37,8 @@ const App = () => {
     </ImageBackground>
   );
 }
-export default App;
+
+export default TelaInicial;
 
 
 

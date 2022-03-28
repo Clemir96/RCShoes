@@ -3,7 +3,7 @@ import { View, StyleSheet,  TouchableOpacity, Text, Image, Button, ScrollView, T
 import Icon from 'react-native-vector-icons/AntDesign';
 import { ImageBackground } from 'react-native';
 
-const App = () => {
+const Produtos = () => {
   return ( 
   <ImageBackground style={styles.imageBackground}>
     <Image
@@ -111,7 +111,8 @@ const App = () => {
     </ImageBackground>
   );
 }
-export default App;
+
+export default Produtos;
 
 
 
