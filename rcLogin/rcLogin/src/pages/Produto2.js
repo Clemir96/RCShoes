@@ -45,7 +45,7 @@ const Produto2 = () => {
             Detalhes do produto:
          </Text>
          <Text style={styles.descriocaoProduto}> 
-            O primeiro tênis adidas ZX foi lancado nos anos 80 e ganhou destaque pelo visual moderno e progressivo, além do design tecnológico.
+            O primeiro tênis adidas ZX foi lancado nos anos 80 e ganhou destaque pelo visual moderno e progressivo.
          </Text>
 
          <View style={styles.botaoCompra}>

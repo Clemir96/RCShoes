@@ -16,8 +16,8 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Produtos" component={Produtos} />
         <Stack.Screen name="TelaInicial" component={TelaInicial} />
+        <Stack.Screen name="Produtos" component={Produtos} />
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Produto1" component={Produto1} />
         <Stack.Screen name="Produto2" component={Produto2} />

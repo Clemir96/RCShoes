@@ -3,7 +3,7 @@ import { View, StyleSheet,  TouchableOpacity, Text, Image, Button, ScrollView, T
 import Icon from 'react-native-vector-icons/AntDesign';
 import { ImageBackground } from 'react-native';
 
-const Login = () => {
+const Login = ({ navigation }) => {
   return ( 
    <ImageBackground style={styles.imageBackground}>
       <Image
@@ -26,7 +26,7 @@ const Login = () => {
       </View>
 
       <View style={styles.areaLogin}>
-         <TouchableOpacity style={styles.repostLogin}>
+         <TouchableOpacity style={styles.repostLogin} onPress={ () => { navigation.navigate('Produtos') } }>
             <Text style={styles.estilizaLogin}>
                Login
             </Text>

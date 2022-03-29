@@ -5,34 +5,34 @@ import { ImageBackground } from 'react-native';
 
 const TelaInicial = ({ navigation }) => {
   return ( 
-  <ImageBackground source={require('../imagemLogin.jpg')} 
-    style={styles.imageBackground}>
+    <ImageBackground source={require('../imagemLogin.jpg')} 
+      style={styles.imageBackground}>
 
-    <View>
-      <TouchableOpacity style={styles.repostCadastro} onPress={ () => { navigation.navigate('Login') } }>
-        <Text style={styles.decoraCadastro}>
-          Cadastre-se e ganhe descontos especiais !!!
+      <View>
+        <TouchableOpacity style={styles.repostCadastro} onPress={ () => { navigation.navigate('Login') } }>
+          <Text style={styles.decoraCadastro}>
+            Cadastre-se e ganhe descontos especiais !!!
+          </Text>
+          <Icon name="user" size={25} color='#4F4F4F' style={styles.posicionaLogin}/>
+        </TouchableOpacity>
+      </View>
+
+      <View style={styles.bordaNome}>
+        <Text style={styles.nomeLoja}>
+          RCshoes
         </Text>
-        <Icon name="user" size={25} color='#4F4F4F' style={styles.posicionaLogin}/>
-      </TouchableOpacity>
-    </View>
+      </View>
 
-    <View style={styles.bordaNome}>
-      <Text style={styles.nomeLoja}>
-        RCshoes
-      </Text>
-    </View>
-
-    <View>
-      <TouchableOpacity style={styles.areaRedes}>
-        <Text style={styles.decoraRedes}>
-          Nos siga em nossas redes sociais
-        </Text>
-          <Icon name="facebook-square" size={20} color='#FFCE29' style={styles.posicionaFacebook}/>
-          <Icon name="instagram" size={20} color='#FFCE29' style={styles.posicionaInstagram}/>
-          <Icon name="twitter" size={20} color='#FFCE29' style={styles.posicionaTwitter}/>
-      </TouchableOpacity>
-    </View>
+      <View>
+        <TouchableOpacity style={styles.areaRedes}>
+          <Text style={styles.decoraRedes}>
+            Nos siga em nossas redes sociais
+          </Text>
+            <Icon name="facebook-square" size={20} color='#FFCE29' style={styles.posicionaFacebook}/>
+            <Icon name="instagram" size={20} color='#FFCE29' style={styles.posicionaInstagram}/>
+            <Icon name="twitter" size={20} color='#FFCE29' style={styles.posicionaTwitter}/>
+        </TouchableOpacity>
+      </View>
 
     </ImageBackground>
   );
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     width: 350,
     height: 30,
-    bottom: 200,
+    bottom: 180,
   },
   decoraCadastro: {
     color: '#FFF',
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     width: 390,
     height: 40,
-    top: 230,
+    top: 170,
   },
   decoraRedes: {
     color: '#FFF',

@@ -54,7 +54,7 @@ const Produto1 = () => {
   );
 }
 
-export default Produto11;
+export default Produto1;
 
 
 
@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
    },
    imagemProduto: {
      width: '98%',
-     height: '35%',
+     height: '30%',
      marginLeft: 4,
      marginTop: 5,
      borderRadius: 3,

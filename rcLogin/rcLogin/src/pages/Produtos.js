@@ -3,7 +3,7 @@ import { View, StyleSheet,  TouchableOpacity, Text, Image, Button, ScrollView, T
 import Icon from 'react-native-vector-icons/AntDesign';
 import { ImageBackground } from 'react-native';
 
-const Produtos = () => {
+const Produtos = ({ navigation }) => {
   return ( 
   <ImageBackground style={styles.imageBackground}>
     <Image
@@ -12,15 +12,6 @@ const Produtos = () => {
         uri: 'https://cdn.discordapp.com/attachments/902707643590787092/956336272828428360/Capturar.jpg',
       }}
     />
-
-    <View>
-      <TouchableOpacity style={styles.areaPesquisar}>
-        <Text style={styles.decoraPesquisar}>
-          Pesquisar
-        </Text>
-        <Icon name="search1" size={20} color='#FFF' style={styles.posicionaSearch}/>
-      </TouchableOpacity>
-    </View>
 
     <View style={styles.areaProdutos}>
       <View style={styles.areaNike}>
@@ -37,7 +28,7 @@ const Produtos = () => {
         <Button
           title="Comprar"
           color='#FFCE29'
-          onPress={() => Alert.alert('Button with adjusted color pressed')}
+          onPress={ () => { navigation.navigate('Produto1') } }
         />
       </View>
 
@@ -55,7 +46,7 @@ const Produtos = () => {
         <Button
           title="Comprar"
           color='#FFCE29'
-          onPress={() => Alert.alert('Button with adjusted color pressed')}
+          onPress={ () => { navigation.navigate('Produto2') } }
         />
       </View>
 
@@ -73,7 +64,7 @@ const Produtos = () => {
           <Button
             title="Comprar"
             color='#FFCE29'
-            onPress={() => Alert.alert('Button with adjusted color pressed')}
+            onPress={ () => { navigation.navigate('Produto3') } }
           />
         </View>
 
@@ -91,21 +82,10 @@ const Produtos = () => {
             <Button
               title="Comprar"
               color='#FFCE29'
-              onPress={() => Alert.alert('Button with adjusted color pressed')}
+              onPress={ () => { navigation.navigate('Produto4') } }
             />
         </View>
         
-      </View>
-
-      <View styles={styles.areaCopy}>
-        <Text style={styles.textoCopy}>
-          Copyright     2022 - Todos os direitos reservados a RC Shoes.
-        </Text>
-
-        <View style={styles.imagemCopy}>
-          <Icon name="copyright" size={11} color='#FFF' style={styles.posicionaSearch}/>
-        </View>
-
       </View>
 
     </ImageBackground>
@@ -126,30 +106,11 @@ const styles = StyleSheet.create({
     height: '10%',
     width: '100%',
   },
-  areaPesquisar: {
-    backgroundColor: '#FFCE29',
-    borderRadius: 20,
-    width: 300,
-    height: 30,
-    top: 10,
-    marginLeft: 55,
-  },
-  decoraPesquisar: {
-    color: '#FFF',
-    marginLeft: 10,
-    marginTop: 4,
-  },
-  posicionaSearch: {
-    textAlign: 'right',
-    marginRight: 10,
-    bottom: 20,
-  },
   areaProdutos: {
     backgroundColor: '#FFCE29',
-    width: '95%',
-    height: 570,
-    marginLeft: 10,
-    top: 20,
+    width: '100%',
+    height: 550,
+    top: 1,
     flexDisplay: 'row',
   },
   tenisNike: {
@@ -178,7 +139,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#4F4F4F',
     width: 180,
     height: 260,
-    left: 198,
+    left: 210,
     bottom: 260,
     alignItems: 'center',
   },
@@ -222,7 +183,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#4F4F4F',
     width: 180,
     height: 260,
-    left: 198,
+    left: 210,
     bottom: 510,
     alignItems: 'center',
   },
@@ -239,18 +200,5 @@ const styles = StyleSheet.create({
     color: '#fff',
     marginTop: 21,
     marginBottom: 8,
-  },
-  textoCopy: {
-    color: '#fff',
-    width: '95%',
-    height: '17%',
-    top: 30,
-    marginLeft: 10,
-    borderRadius: 3,
-    textAlign: 'center',
-  },
-  imagemCopy: {
-    right: 312,
-    top: 32,
   },
 })
